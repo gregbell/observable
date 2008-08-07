@@ -9,7 +9,7 @@ module Observable
   
   def self.all_observables
     @@observable_classes.collect do |klass|
-      klass.observables.collect{|name| "#{klass}##{name}" }
+      klass.observables.collect{|name| "#{klass}:#{name}" }
     end.flatten
   end
   

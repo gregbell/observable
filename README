@@ -1,9 +1,9 @@
-== Observer
+== Observable
 
 Created by Greg Bell
 v 1.0
 
-A really small and simple implementation of the Observer Pattern
+A really small and simple implementation of the Observer Pattern in Ruby
 
 To use, include Observable in to any class.
 
