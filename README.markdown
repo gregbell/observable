@@ -1,15 +1,15 @@
-== Observable
-
-Created by Greg Bell
-v 1.0
+Observable
+==========
 
 A really small and simple implementation of the Observer Pattern in Ruby
 
 To use, include Observable in to any class.
 
+Author:		Greg Bell
+Version:	1.0
 
+### 1. CREATE AN OBSERVABLE ATTR_ACCESSOR
 
-1. CREATE AN OBVERVABLE ATTR_ACCESSOR
 To create an observable attr_accessor so that other classes can be notified
 when it changes:
   
@@ -22,8 +22,8 @@ when it changes:
   end
 
 
+### 2. CREATE A CUSTOM OBSERVABLE
 
-2. CREATE A CUSTOM OBSERVABLE
 To create a custom observable noticication:
 
   class Employee
@@ -44,8 +44,8 @@ To create a custom observable noticication:
   end
 
 
+### 3. REGISTER FOR UPDATES
 
-3. REGISTER FOR UPDATES
 To register for updates to an observable class:
 
   class HR
@@ -68,9 +68,8 @@ To register for updates to an observable class:
   end
 
 
+### 4. CREATE ANONYMOUS OBSERVABLES
 
-
-4. CREATE ANONYMOUS OBSERVABLES
 To create observables that are not associated with any class:
 
 	Observable.create :system_message
@@ -92,5 +91,8 @@ To create observables that are not associated with any class:
 	end
 
 
-5. VIEW ALL AVAIABLE OBSERVABLES
+### 5. VIEW ALL AVAIABLE OBSERVABLES
+
 You can view all currently observables by calling Observable.all_observables
+
+
