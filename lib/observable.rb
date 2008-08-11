@@ -74,7 +74,17 @@ module Observable
   end
   
   def notify(name, event)
+    notify_instance_observers(name, event) if @observables
     self.class.notify_observers(name, event)
+  end
+  
+  def notify_instance_observers(name, event)
+    @observables[name].each {|o| o.call(event)}
+  end
+  
+  def observe(name, &block)
+    (@observables ||= {}) && (@observables[name] ||= [])
+    @observables[name] << block
   end
   
 end

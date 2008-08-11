@@ -67,6 +67,15 @@ To register for updates to an observable class:
 	  
 	end
 
+To register for updates to only ONE observable instance:
+
+	# Employee has setup an observable called :salary
+	employee = Employee.new("Bob")
+	
+	employee.observe :salary do |event|
+		HR.employee_salary_updated(event)
+	end
+
 
 ### 4. CREATE ANONYMOUS OBSERVABLES
 

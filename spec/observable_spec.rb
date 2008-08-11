@@ -67,7 +67,13 @@ describe Observable do
       end
       lambda{ Employee.new.salary = 5000  }.should raise_error("received event notification")
     end
-    
+    it "should register a new observer on an instance of an observable class" do
+      employee = Employee.new
+      employee.observe :salary do
+        raise "received event notification"
+      end
+      lambda{ employee.salary = 5000  }.should raise_error("received event notification")
+    end
   end
   
 end
