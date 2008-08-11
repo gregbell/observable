@@ -91,7 +91,7 @@ To create observables that are not associated with any class:
 	end
 
 
-### 5. VIEW ALL AVAIABLE OBSERVABLES
+### 5. VIEW ALL AVAILABLE OBSERVABLES
 
 You can view all currently observables by calling Observable.all_observables
 
